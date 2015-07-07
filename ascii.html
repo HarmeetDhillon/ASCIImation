@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ASCIImation</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="ascii.css">
+	<script src="ascii.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.cs.ubc.ca/~feeley/cics516/cur/class-only/hw5/animations.js"></script>
+	<script type="text/javascript" src="myanimation.js"></script>
+</head>
+
+<!--
+	Harmeet Kaur Dhillon, Student ID:86987147
+	-->
+
+<body>
+	<h1 id="Heading"> CICS516 ASCII Animation Viewer </h1>
+
+	<textarea id="textbox" rows="20" cols="80" > </textarea>
+
+	<div id="fields">
+	<fieldset> 
+		<legend>Play Controls:</legend>
+		<button type="button" id="Start" onclick="StartAnimation()"> Start </button>
+		<button type="button" id="Stop" onclick="StopAnimation()" disabled> Stop </button>
+	</fieldset>
+
+	<fieldset>
+		<legend> Animation: </legend>
+			<select id="Animation" onchange="SelectAnimation()">
+				<option value="BLANK" selected>Blank</option>
+				<option value="EXERCISE">Exercise</option>
+				<option value="JUGGLER">Juggler</option>
+				<option value="BIKE">Bike</option>
+				<option value="DIVE">Dive</option>
+				<option value="CUSTOM">Custom</option>
+			</select>
+	</fieldset>
+
+	<fieldset>
+	<legend> Size: </legend>
+		<select id="Size" onchange="SelectSize()">
+			<option value="7pt">Tiny</option>
+			<option value="10pt">Small</option>
+			<option value="12pt" selected>Medium</option>				
+			<option value="16pt">Large</option>
+			<option value="24pt">Extra Large</option>
+			<option value="32pt">XXL</option>
+		</select>
+	</fieldset>
+
+	<fieldset>
+	<legend> Speed: </legend>
+	<input type="checkbox" id="turbo" onchange="SelectTurbo()" disabled>Turbo
+    </fieldset>
+	
+	</div>
+
+       <div id="Position">
+		<span class="spaces"><a href="https://webster.cs.washington.edu/validate-html.php"><img src="http://ws.mss.icics.ubc.ca/~cics516/cur/hw/hw2/images/w3c-xhtml.png" alt="Valid HTML5" /></a> </span> </br>
+		<span class="spaces"><a href="https://webster.cs.washington.edu/validate-css.php"><img src="http://ws.mss.icics.ubc.ca/~cics516/cur/hw/hw2/images/w3c-css.png" alt="Valid CSS" /></a> </span></br>
+		<span class="spaces"><a href="https://webster.cs.washington.edu/jslint/?referer"><img src="http://webster.cs.washington.edu/w3c-js.png" alt="JSLint" /></a></span>
+		</div>
+</body>
